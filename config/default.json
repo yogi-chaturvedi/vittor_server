@@ -28,5 +28,5 @@
       "passwordField": "password"
     }
   },
-  "postgres": "postgres://falcon:falcon@localhost:5433/viitor_server"
+  "postgres": "postgres://gws:gws@123@54.190.193.36:5432/doctors_portal"
 }
