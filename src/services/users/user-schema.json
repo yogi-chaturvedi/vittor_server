@@ -1,0 +1,106 @@
+[
+  {
+    "id": "firstName",
+    "label": "First name",
+    "placeholder": "Enter first name",
+    "type": "text",
+    "validationType": "string",
+    "min": 5,
+    "max": 10,
+    "validations": [
+      {
+        "type": "required",
+        "message": "this field is required"
+      },
+      {
+        "type": "regex",
+        "value": null,
+        "message": "Invalid name"
+      }
+    ]
+  },
+  {
+    "id": "lastName",
+    "label": "Last name",
+    "placeholder": "Enter last name",
+    "type": "text",
+    "validationType": "string",
+    "min": 5,
+    "max": 10,
+    "validations": [
+      {
+        "type": "required",
+        "message": "this field is required"
+      },
+      {
+        "type": "regex",
+        "value": null,
+        "message": "Invalid name"
+      }
+    ]
+  },
+  {
+    "id": "email",
+    "label": "Email",
+    "placeholder": "Enter email",
+    "type": "text",
+    "validationType": "string",
+    "validations": [
+      {
+        "type": "required",
+        "message": "this field is required"
+      },
+      {
+        "type": "regex",
+        "value": null,
+        "message": "Invalid email"
+      }
+    ]
+  },
+  {
+    "id": "country",
+    "label": "Country",
+    "placeholder": "Enter country",
+    "type": "drop-down",
+    "validationType": "string",
+    "validations": [
+      {
+        "type": "required",
+        "message": "this field is required"
+      }
+    ],
+    "apiUrl": "/countries"
+  },
+  {
+    "id": "state",
+    "label": "State",
+    "placeholder": "Enter state",
+    "type": "drop-down",
+    "derivedFrom": "country",
+    "validationType": "string",
+    "validations": [
+      {
+        "type": "required",
+        "message": "this field is required"
+      }
+    ],
+    "apiUrl": "/state",
+    "apiParams": ["country"]
+  },
+  {
+    "id": "city",
+    "label": "City",
+    "placeholder": "Enter city",
+    "type": "drop-down",
+    "derivedFrom": "state",
+    "validationType": "string",
+    "validations": [
+      {
+        "type": "required",
+        "message": "this field is required"
+      }
+    ],
+    "apiUrl": "/city",
+    "apiParams": ["state"]
+  }
+]
